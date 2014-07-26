@@ -1,17 +1,24 @@
-hehe
-<table class="ui table segment">
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Sender</th>
-        <th>Date</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="message in messages">
-        <td>{{message.id}}</td>
-        <td>{{message.sender}}</td>
-        <td>{{message.date}}</td>
-    </tr>
-    </tbody>
-</table>
+<div ng-repeat="plan in plans">
+    </br>
+    <table class="ui table segment">
+        <thead>
+        <tr>
+            <th>{{plan.pid}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>{{plan.content}}</th>
+        </tr>
+        <tr>
+            <th>{{plan.starting_time}}--{{plan.time_to_finish}}</th>
+        </tr>
+        <tr>
+            <th>{{plan.state}}</th>
+        </tr>
+
+        </tbody>
+    </table>
+    <div class="ui divider">
+    </div>
+</div>

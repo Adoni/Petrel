@@ -1,11 +1,12 @@
-var sMailServices = angular.module('sMail', ['ngRoute'])
+var PetrelServices = angular.module('Petrel', ['ngRoute'])
 
-function sMailRouteConfig($routeProvider){
+
+function PetrelRouteConfig($routeProvider){
     $routeProvider
         .when('/', {
             controller: 'ListController',
             templateUrl:'src/list.html'
-    })
+        })
         .when('/list',{
             controller: 'ListController',
             templateUrl:'src/list.html'
@@ -15,12 +16,26 @@ function sMailRouteConfig($routeProvider){
         });
 }
 
-sMailServices.config(sMailRouteConfig);
+PetrelServices.config(PetrelRouteConfig);
 
-mymessages=[
-    {id:0, sender:"Adoni", date:'Dec 7, 2013 8:15:13'},
-];
-
-sMailServices.controller('ListController',function($scope) {
-    $scope.messages=mymessages;
+plans=[
+    {
+        pid:0,
+        starting_time:'2014.1.1',
+        time_to_finish:'2014.5.6',
+        content:'完成Petrel',
+        state:0,
+        tasks:[]
+    },
+    {
+        pid:0,
+        starting_time:'2014.1.1',
+        time_to_finish:'2014.5.6',
+        content:'完成Petrel',
+        state:0,
+        tasks:[]
+    },
+]
+PetrelServices.controller('ListController',function($scope) {
+    $scope.plans=plans;
 });
