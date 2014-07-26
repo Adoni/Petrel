@@ -1,14 +1,14 @@
-var sMailServices = angular.module('sMail', [])
+var sMailServices = angular.module('sMail', ['ngRoute'])
 
 function sMailRouteConfig($routeProvider){
     $routeProvider
         .when('/', {
             controller: 'ListController',
-            templateUrl:'list.html'
+            templateUrl:'src/list.html'
     })
         .when('/list',{
             controller: 'ListController',
-            templateUrl:'list.html'
+            templateUrl:'src/list.html'
         })
         .otherwise({
             redirectTo: '/list'
