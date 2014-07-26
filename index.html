@@ -4,12 +4,23 @@
     <script src="static/javascript/angular-route.min.js"></script>
     <script src="static/javascript/semantic.js"></script>
     <script src="src/controllers.js"></script>
-    <link href="static/css/semantic.css">
+    <link rel="stylesheet" href="static/css/semantic.css">
+    <link rel="stylesheet" href="static/css/semantic.min.css">
     <meta charset="UTF-8">
     <title>Petrel: to be faster</title>
 </head>
 <body>
-<h1>sMail</h1>
+<div class="ui green inverted menu">
+    <a class="active item">
+        <i class="home icon"></i> My Plan
+    </a>
+    <a class="item">
+        <i class="mail icon"></i> Today
+    </a>
+    <a class="item">
+        <i class="user icon"></i> User
+    </a>
+</div>
 <div ng-view></div>
 </body>
 </html>
